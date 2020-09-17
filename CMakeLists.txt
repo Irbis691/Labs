@@ -68,7 +68,7 @@ set(PROJECT_SOURCES
         #        split_into_sentences.cpp
         #        simple_vector_2.cpp
         #        merge_sort_move.cpp
-#        Red/Red_5_week/priority_collection.cpp
+        #        Red/Red_5_week/priority_collection.cpp
         #        matrix_sum.cpp
         #        explore_key_words.cpp
         #        synchronized.cpp

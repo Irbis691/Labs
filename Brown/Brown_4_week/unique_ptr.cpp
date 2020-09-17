@@ -1,7 +1,6 @@
 #include "../../test_runner.h"
 
 #include <cstddef>
-#include <stdlib.h>
 #include <functional>
 
 template<typename T>
@@ -126,33 +125,14 @@ void TestGetters() {
 	ASSERT_EQUAL(ptr->value, 42);
 }
 
-//function<void(int)>& func
 void ForEach(const std::vector<int>& val, function<void(int)> func) {
 	for(int v: val) {
 		func(v);
 	}
 }
 
-void a(const int &num) {}
-void b(const int num) {}
-void c(int num) {}
-void d(int &num) {}
-
 int main() {
-//	std::vector<int> values = {1, 2, 3};
-//
-//	int b = 1;
-//
-//	auto a = [=](int v) { std::cout << v << endl; };
-//
-//	ForEach(values, a);
-
-
-
-	float flt;
-	a(flt); //norm
-	b(flt); //norm
-	c(flt); //norm
-	d(flt); // compilation error
-
+	TestRunner tr;
+	RUN_TEST(tr, TestLifetime);
+	RUN_TEST(tr, TestGetters);
 }
