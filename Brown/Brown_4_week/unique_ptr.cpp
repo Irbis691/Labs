@@ -1,7 +1,6 @@
 #include "../../test_runner.h"
 
 #include <cstddef>
-#include <functional>
 
 template<typename T>
 class UniquePtr {
@@ -123,12 +122,6 @@ void TestGetters() {
 	ASSERT_EQUAL(ptr.Get()->value, 42);
 	ASSERT_EQUAL((*ptr).value, 42);
 	ASSERT_EQUAL(ptr->value, 42);
-}
-
-void ForEach(const std::vector<int>& val, function<void(int)> func) {
-	for(int v: val) {
-		func(v);
-	}
 }
 
 int main() {
